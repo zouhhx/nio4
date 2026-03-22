@@ -1,0 +1,4 @@
+Total Files Processed: 3
+Total Success: 95
+Total Fail: 55
+Total Rate: 63.33%
