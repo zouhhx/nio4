@@ -1,4 +1,4 @@
-Total Files Processed: 3
-Total Success: 95
-Total Fail: 55
-Total Rate: 63.33%
+已处理文件总数: 3
+测试成功总数: 95
+测试失败总数: 55
+总测试成功率: 63.33%

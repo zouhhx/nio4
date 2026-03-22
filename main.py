@@ -32,7 +32,7 @@ if __name__ == "__main__":
     
     total_s, total_f = 0, 0
     
-    logging.info(f"Detected {len(csv_files)} test files.")
+    logging.info(f"检测到 {len(csv_files)} 个测试文件.")
     for f in csv_files:
         s, f_count = analyze(f)
         total_s += s
@@ -43,15 +43,15 @@ if __name__ == "__main__":
 
     report_path = os.path.join(output_dir, 'summary_report.txt')
     with open(report_path, "w") as report:
-        report.write(f"Total Files Processed: {len(csv_files)}\n")
-        report.write(f"Total Success: {total_s}\n")
-        report.write(f"Total Fail: {total_f}\n")
-        report.write(f"Total Rate: {total_rate*100:.2f}%\n")
+        report.write(f"已处理文件总数: {len(csv_files)}\n")
+        report.write(f"测试成功总数: {total_s}\n")
+        report.write(f"测试失败总数: {total_f}\n")
+        report.write(f"总测试成功率: {total_rate*100:.2f}%\n")
 
     plt.figure(figsize=(6, 6))
     plt.pie([total_s, total_f], labels=['Success', 'Fail'], colors=['#4CAF50', '#F44336'], autopct='%1.1f%%')
     plt.title(f'Total Parking Performance (n={total_tests})')
     plt.savefig(os.path.join(output_dir, 'summary.png'))
     
-    print(f"Done! Results are in the '{output_dir}' folder.")
-    logging.info("Automation task completed successfully.")
+    print(f"完成，结果在 '{output_dir}' 文件夹中.")
+    logging.info("自动化任务已成功完成。")
